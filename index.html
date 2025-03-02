@@ -1,0 +1,31 @@
+!DOCTYPE html>
+<html lang="es">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Barbería</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Bienvenido a la Barbería</h2>
+        <div id="login-form">
+            <h3>Iniciar Sesión</h3>
+            <input type="text" id="login-username" placeholder="Usuario">
+            <input type="password" id="login-password" placeholder="Contraseña">
+            <button onclick="login()">Ingresar</button>
+            <p>¿No tienes cuenta? <a href="#" onclick="mostrarRegistro()">Regístrate</a></p>
+        </div>
+
+        <div id="register-form" style="display: none;">
+            <h3>Registro</h3>
+            <input type="text" id="register-username" placeholder="Usuario">
+            <input type="password" id="register-password" placeholder="Contraseña">
+            <button onclick="register()">Registrarse</button>
+            <p>¿Ya tienes cuenta? <a href="#" onclick="mostrarLogin()">Inicia sesión</a></p>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Turnos - Barbería</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Agenda de Turnos - Barbería</h1>
+
+    <!-- Formulario de Registro -->
+    <section>
+        <h2>Registro de Usuario</h2>
+        <form id="registro-form">
+            <input type="text" id="nombre" placeholder="Nombre" required>
+            <button type="submit">Registrar</button>
+        </form>
+    </section>
+
+    <!-- Formulario de Agendado -->
+    <section>
+        <h2>Agendar Turno</h2>
+        <form id="turno-form">
+            <select id="usuario"></select> <!-- Lista de usuarios registrados -->
+            <input type="datetime-local" id="fecha-hora" required>
+            <input type="number" id="costo" placeholder="Costo ($)" required>
+            <button type="submit">Agendar Turno</button>
+        </form>
+    </section>
+
+    <!-- Tabla de Turnos -->
+    <section>
+        <h2>Turnos Agendados</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Fecha y Hora</th>
+                    <th>Costo</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="turnos-lista">
+                <!-- Aquí se mostrarán los turnos agendados -->
+            </tbody>
+        </table>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
