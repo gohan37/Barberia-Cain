@@ -13,7 +13,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    width: 300px;
+    width: 250px;
     width: 90%;
     max-width: 400px; /* Máximo tamaño */
     background: white;
@@ -47,4 +47,17 @@ input, button {
     margin-top: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+@media (max-width: 600px) {
+    .login-container {
+        width: 100%;
+        padding: 15px;
+    }
+}
+.login-container img {
+    width: 100%; /* Se adapta al contenedor */
+    max-width: 250px; /* Evita que sea demasiado grande */
+    display: block; /* Elimina espacios extra */
+    margin: auto; /* Centra horizontalmente */
+    padding: 10px; /* Evita que toque los bordes */
 }
