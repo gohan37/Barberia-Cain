@@ -42,7 +42,7 @@ function login() {
     
     if (user) {
         localStorage.setItem("loggedUser", username);
-        window.location.href = "turnos.html"; // Redirige a la página de turnos
+        window.location.href = "turnos.html"; 
     } else {
         alert("Usuario o contraseña incorrectos.");
     }
@@ -61,7 +61,7 @@ function register() {
 
     let users = JSON.parse(localStorage.getItem("users")) || [];
     
-    // Si el nombre de usuario es "admin", lo marcamos como el usuario principal
+   
     if (username.toLowerCase() === "admin" && password === "admin123") {
         users.push({ username: username, password: password, isAdmin: true });
     } else {
@@ -70,10 +70,6 @@ function register() {
     
     localStorage.setItem("users", JSON.stringify(users));
     alert("Registro exitoso.");
-    window.location.href = "index.html";  // Redirigimos a la página de login
+    window.location.href = "index.html"; 
 }
-/*document.addEventListener("DOMContentLoaded", function () {
-    if (localStorage.getItem("loggedUser")) {
-        window.location.href = "/usuario/turnos.html"; // Redirige si ya está logueado
-    }
-});*/
+
